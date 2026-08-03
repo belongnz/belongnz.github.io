@@ -330,3 +330,30 @@ html[lang="si"] h1{line-height:1.3;letter-spacing:0}
 html[lang="si"] h2,html[lang="si"] h3{line-height:1.4;letter-spacing:0}
 html[lang="si"] .eyebrow,html[lang="si"] .pkg-stage,html[lang="si"] .stage-no,html[lang="si"] .route{letter-spacing:.05em;text-transform:none}
 .lang-switch{font-weight:700}
+
+/* ---------- v5: visuals ---------- */
+/* package card icons */
+.pkg-icon{width:42px;height:42px;color:var(--fern);margin-bottom:14px}
+.pkg-card.featured .pkg-icon{color:var(--tussock)}
+.pkg-icon svg{width:100%;height:100%}
+
+/* hero mountain illustration */
+.hero{padding-bottom:150px}
+.hero-art{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:auto;pointer-events:none;display:block}
+
+/* photo band */
+.photo-band{background:var(--pounamu-deep);padding:0}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);min-height:340px}
+.photo-tile{
+  position:relative;display:flex;align-items:flex-end;
+  background-color:var(--fern);
+  background-size:cover;background-position:center;
+  min-height:280px;
+}
+.photo-tile .cap{
+  width:100%;padding:22px 24px;color:#fff;
+  background:linear-gradient(transparent,rgba(10,44,33,.85));
+  font-weight:700;font-size:1rem;
+}
+.photo-tile .cap small{display:block;font-weight:400;font-size:.82rem;color:rgba(255,255,255,.75);margin-top:2px}
+@media (max-width:860px){.photo-grid{grid-template-columns:1fr}.photo-tile{min-height:220px}}
