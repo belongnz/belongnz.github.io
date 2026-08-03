@@ -321,3 +321,12 @@ footer a:hover{color:var(--tussock)}
   .nav-toggle{display:block}
   .foot-grid{grid-template-columns:1fr}
 }
+
+/* ---------- Sinhala language support ---------- */
+html[lang="si"] body{font-family:"Noto Sans Sinhala",var(--font-body);line-height:1.85}
+html[lang="si"] h1,html[lang="si"] h2,html[lang="si"] h3,
+html[lang="si"] .big-price,html[lang="si"] .pkg-price{font-family:"Noto Serif Sinhala",var(--font-display)}
+html[lang="si"] h1{line-height:1.3;letter-spacing:0}
+html[lang="si"] h2,html[lang="si"] h3{line-height:1.4;letter-spacing:0}
+html[lang="si"] .eyebrow,html[lang="si"] .pkg-stage,html[lang="si"] .stage-no,html[lang="si"] .route{letter-spacing:.05em;text-transform:none}
+.lang-switch{font-weight:700}
