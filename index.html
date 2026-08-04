@@ -21,6 +21,7 @@
       <a href="#journey">Your journey</a>
       <a href="#trust">Why BelongNZ</a>
       <a href="#faq">FAQ</a>
+      <a href="#inquiry">Contact</a>
       <a class="lang-switch" href="si/index.html">සිංහල</a>
       <a class="btn btn-gold" href="packages/assessment.html">Book an assessment</a>
     </nav>
@@ -35,6 +36,13 @@
     </div>
     <h1>You've spent years earning there.<br><span class="gold">It's time to belong here.</span></h1>
     <p class="lede">Twenty years of skill, and a visa that still expires. From <strong>24 August 2026</strong>, New Zealand opens new residence pathways for experienced tradespeople and skilled professionals — pathways where your years of work finally count towards something permanent.</p>
+    <div class="countdown" data-deadline="2026-08-24T00:00:00+12:00" data-done="The new pathways are now open — book your assessment today.">
+      <span class="cd-title">New residence pathways open in</span>
+      <div class="cd-box" data-unit="d"><b>—</b><span>Days</span></div>
+      <div class="cd-box" data-unit="h"><b>—</b><span>Hours</span></div>
+      <div class="cd-box" data-unit="m"><b>—</b><span>Minutes</span></div>
+      <div class="cd-box" data-unit="s"><b>—</b><span>Seconds</span></div>
+    </div>
     <div class="cta-row">
       <a class="btn btn-gold" href="#packages">See our packages</a>
       <a class="btn btn-ghost on-dark" href="#journey">How the pathway works</a>
@@ -285,6 +293,87 @@
   </div>
 </section>
 
+<!-- INQUIRY -->
+<section class="inquiry" id="inquiry">
+  <div class="wrap inquiry-grid">
+    <div class="reveal">
+      <span class="eyebrow dark">Free inquiry</span>
+      <h2>Tell us about yourself. We'll tell you where to start.</h2>
+      <p class="lede" style="margin-top:14px">Fill in this short form and our team will contact you within 1–2 working days with the right next step for your situation — no cost, no obligation, no spam.</p>
+      <p class="form-note">Your details are used only to respond to your inquiry. We never sell or share your information. Immigration advice itself is always provided by a Licensed Immigration Adviser.</p>
+    </div>
+    <div class="reveal">
+      <form id="inquiry-form" class="form-card" action="https://formsubmit.co/info@cleardesk.co.nz" method="POST">
+        <input type="hidden" name="_subject" value="New BelongNZ website inquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-row">
+          <div class="field">
+            <label for="f-name">Full name *</label>
+            <input id="f-name" name="Name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="Email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="f-phone">WhatsApp number *</label>
+            <input id="f-phone" name="WhatsApp" type="tel" required placeholder="+971 …">
+          </div>
+          <div class="field">
+            <label for="f-country">Country you live in *</label>
+            <select id="f-country" name="Country" required>
+              <option value="" selected disabled>Select…</option>
+              <option>UAE</option><option>Saudi Arabia</option><option>Qatar</option>
+              <option>Kuwait</option><option>Oman</option><option>Bahrain</option>
+              <option>Israel</option><option>Sri Lanka</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="f-occ">Your occupation / trade *</label>
+            <input id="f-occ" name="Occupation" type="text" required placeholder="e.g. Electrician, Nurse, Engineer">
+          </div>
+          <div class="field">
+            <label for="f-exp">Years of experience *</label>
+            <select id="f-exp" name="Experience" required>
+              <option value="" selected disabled>Select…</option>
+              <option>Less than 5 years</option><option>5–10 years</option>
+              <option>10–20 years</option><option>More than 20 years</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-service">What are you most interested in? *</label>
+          <select id="f-service" name="Interested in" required>
+            <option value="" selected disabled>Select…</option>
+            <option>Licensed eligibility assessment</option>
+            <option>Pathway Readiness Report ($49)</option>
+            <option>Migration Masterclass</option>
+            <option>Work visa document preparation</option>
+            <option>Student visa document preparation</option>
+            <option>CV / job readiness</option>
+            <option>Not sure yet — guide me</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Anything else you'd like us to know?</label>
+          <textarea id="f-msg" name="Message" placeholder="Your situation, your family, your timeline…"></textarea>
+        </div>
+        <button class="btn btn-gold" type="submit" data-sending="Sending…" style="width:100%">Send my inquiry</button>
+      </form>
+      <div class="form-success">
+        <h3>Thank you — we've received your inquiry.</h3>
+        <p>Our team will contact you within 1–2 working days on WhatsApp or email. Meanwhile, feel free to explore our packages above.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="wrap">
@@ -315,7 +404,7 @@
       </div>
       <div>
         <h4>Contact</h4>
-        <a href="mailto:hello@belongnz.example">hello@belongnz.example</a>
+        <a href="mailto:info@cleardesk.co.nz">info@cleardesk.co.nz</a>
         <a href="#">WhatsApp (coming soon)</a>
         <a href="#journey">How it works</a>
         <a href="#faq">FAQ</a>

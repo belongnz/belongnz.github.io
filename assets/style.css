@@ -357,3 +357,61 @@ html[lang="si"] .eyebrow,html[lang="si"] .pkg-stage,html[lang="si"] .stage-no,ht
 }
 .photo-tile .cap small{display:block;font-weight:400;font-size:.82rem;color:rgba(255,255,255,.75);margin-top:2px}
 @media (max-width:860px){.photo-grid{grid-template-columns:1fr}.photo-tile{min-height:220px}}
+
+/* ---------- v6: motion + countdown + form ---------- */
+/* animated hero gradient */
+.hero{background:linear-gradient(200deg,var(--pounamu-deep),var(--pounamu) 45%,var(--fern) 75%,var(--pounamu-deep));background-size:220% 220%;animation:heroShift 16s ease-in-out infinite}
+@keyframes heroShift{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
+
+/* route line: marching dots + pulsing destination */
+.route .line{border-top:0;height:2px;background-image:linear-gradient(90deg,rgba(255,255,255,.5) 0 6px,transparent 6px 14px);background-size:14px 2px;animation:march 1.2s linear infinite}
+@keyframes march{to{background-position:14px 0}}
+.route .line::after{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,75,.6)}50%{box-shadow:0 0 0 7px rgba(201,162,75,0)}}
+
+/* countdown */
+.countdown{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap;margin:26px 0 6px}
+.countdown .cd-title{width:100%;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tussock);margin-bottom:2px}
+html[lang="si"] .countdown .cd-title{letter-spacing:.04em;text-transform:none}
+.cd-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 16px;min-width:76px;text-align:center;backdrop-filter:blur(4px)}
+.cd-box b{display:block;font-family:var(--font-display);font-size:2rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.cd-box span{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+html[lang="si"] .cd-box span{letter-spacing:.03em;text-transform:none}
+.cd-done{font-family:var(--font-display);font-size:1.3rem;color:var(--tussock)}
+
+/* staggered reveals in grids */
+.pkg-grid .reveal:nth-child(2),.why-grid .reveal:nth-child(2),.steps .reveal:nth-child(2){transition-delay:.08s}
+.pkg-grid .reveal:nth-child(3),.why-grid .reveal:nth-child(3),.steps .reveal:nth-child(3){transition-delay:.16s}
+.pkg-grid .reveal:nth-child(4),.steps .reveal:nth-child(4){transition-delay:.24s}
+.pkg-grid .reveal:nth-child(5){transition-delay:.08s}
+.pkg-grid .reveal:nth-child(6){transition-delay:.16s}
+.pkg-grid .reveal:nth-child(7){transition-delay:.24s}
+.pkg-grid .reveal:nth-child(8){transition-delay:.32s}
+
+/* icon + button micro-motion */
+.pkg-icon{transition:transform .25s ease}
+.pkg-card:hover .pkg-icon{transform:translateY(-3px) scale(1.08)}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg)}
+.btn:hover::after{animation:shine .7s ease}
+@keyframes shine{to{left:130%}}
+
+/* inquiry form */
+.inquiry{background:var(--paper);border-top:1px solid var(--haze)}
+.inquiry-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.form-card{background:var(--mist);border:1px solid var(--haze);border-radius:var(--radius);padding:34px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:.85rem;margin-bottom:6px;color:var(--ink)}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 14px;border:1.5px solid var(--haze);border-radius:10px;
+  font-family:inherit;font-size:.95rem;background:#fff;color:var(--ink);
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--tussock);box-shadow:0 0 0 3px rgba(201,162,75,.18)}
+.field textarea{min-height:96px;resize:vertical}
+.form-note{font-size:.8rem;color:var(--ink-soft);margin-top:10px;line-height:1.6}
+.form-success{display:none;background:#EAF4EC;border:1.5px solid var(--fern);border-radius:var(--radius);padding:26px;text-align:center}
+.form-success h3{color:var(--fern);margin-bottom:8px}
+.form-success p{color:var(--ink-soft);font-size:.95rem}
+@media (max-width:900px){.inquiry-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
